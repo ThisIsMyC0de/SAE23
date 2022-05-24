@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        {% block title %}
+        <title>R&T Development</title>
+        {% endblock %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        {% load static %}
+        <link rel="stylesheet" href={% static "css/style.css" %}>
+    </head>
+<body>
+ {% block menu %}
+ <h1>R&T Development</h1>
+ 
+ {% block  sidebar %}
+ <h2>Menu</h2>
+ <ul id="menu">
+     <li><a href="{% url 'index' %}">Home</a></li>
+ </ul>
+ {% endblock %}
+ 
+ {% endblock %}
+ 
+ {% load static %}
+ <img src="{% static 'computerapp/images/rtdev.png' %}" alt="logo" style="width:512px;height:512px;">
+ 
+ {% block content %}
+    Blabla de la premiere Page
+    {% endblock %}
+</body>
+</html> 
